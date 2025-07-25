@@ -35,7 +35,7 @@ public class JobAppService {
                     continue; //Show Status class call
                 case 2:
                     System.out.println("2) Enter Job name/number: ");
-                    int id = scanner.nextInt();
+                    Long id = (long) scanner.nextInt();
                     scanner.nextLine();
                     //creatingTicket.creatingTicket(service);
                     service.getJobById(id);

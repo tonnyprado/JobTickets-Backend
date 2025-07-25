@@ -1,9 +1,11 @@
 package org.example.Services;
 
-import org.example.Constructor.JobInfoConstructor;
+import org.example.Controller.JobInfoConstructor;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.util.Scanner;
 
+@SpringBootApplication
 public class creatingTicket {
 
     public creatingTicket(JobTicketService service){
