@@ -1,11 +1,9 @@
 package org.example.Services;
 
-import org.example.Controller.JobInfoConstructor;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.example.Model.JobInfo;
 
 import java.util.Scanner;
 
-@SpringBootApplication
 public class creatingTicket {
 
     public creatingTicket(JobTicketService service){
@@ -38,7 +36,7 @@ public class creatingTicket {
             System.out.print("Email Recruiter: ");
             String emailRecruiter = scanner.nextLine();
 
-            JobInfoConstructor jobApplication = new JobInfoConstructor(jobName, companyName, jobDescription, startDate, recruiterName, emailRecruiter);
+            JobInfo jobApplication = new JobInfo(jobName, companyName, jobDescription, startDate, recruiterName, emailRecruiter);
             service.addJob(jobApplication);
         }
         System.out.println("\n Registered job tickets: ");

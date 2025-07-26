@@ -1,5 +1,6 @@
 package org.example.Controller;
 
+import org.example.Model.JobInfo;
 import org.example.Services.JobTicketService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -15,13 +16,13 @@ public class JobTicketController {
     private JobTicketService service;
 
     @PostMapping
-    public ResponseEntity<Void> createJob(@RequestBody JobInfoConstructor job){
+    public ResponseEntity<Void> createJob(@RequestBody JobInfo job){
         service.addJob(job);
         return ResponseEntity.ok().build();
     }
 
     @GetMapping
-    public List<JobInfoConstructor> getAllJobs(){
+    public List<JobInfo> getAllJobs(){
         return service.getAllJobs();
     }
 }

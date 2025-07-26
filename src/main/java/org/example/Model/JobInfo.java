@@ -1,4 +1,4 @@
-package org.example.Controller;
+package org.example.Model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -10,7 +10,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class JobInfoConstructor {
+public class JobInfo {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,10 +23,10 @@ public class JobInfoConstructor {
     String recruiterName;
     String emailRecruiter;
 
-    public JobInfoConstructor() {
+    public JobInfo() {
     }
 
-    public JobInfoConstructor(String jobName, String companyName, String jobDescription, String startDate, String recruiterName, String emailRecruiter){
+    public JobInfo(String jobName, String companyName, String jobDescription, String startDate, String recruiterName, String emailRecruiter){
         this.jobName = jobName;
         this.companyName = companyName;
         this.jobDescription = jobDescription;
